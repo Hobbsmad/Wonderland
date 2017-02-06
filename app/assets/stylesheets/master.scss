@@ -19,9 +19,11 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: image_url("symphony.png");
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 .navbar {
   background: image_url("dark_embroidery.png");
-  box-shadow: 0px 1px 3px #2a2a2a;
+  box-shadow: 5px 5px 5px #888888;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
