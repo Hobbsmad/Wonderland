@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
 
   def index
-    @places = Place.all
+    @places = Place.all.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -16,6 +16,10 @@ class PlacesController < ApplicationController
  end
 
  def show
+   @place = Place.find(params[:id])
+ end
+
+ def edit
    @place = Place.find(params[:id])
  end
 
