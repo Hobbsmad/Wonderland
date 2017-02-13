@@ -36,6 +36,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'will_paginate', '>= 3.1'
 gem 'devise'
 gem 'simple_form'
+gem 'geocoder'
+gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
