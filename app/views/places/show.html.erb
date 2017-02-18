@@ -30,7 +30,20 @@
 
     <div id="map"></div>
 <% end %>
-
+<div class="booyah-box col-10 offset-1">
+  <h1>Photos</h1>
+  <% @place.photos.each do |photos| %>
+    <%= image_tag photos.picture, class: "image-class" %>
+    <%= photos.caption %>
+  <% end %>
+  <%= simple_form_for @photo, url: place_photos_path(@place.id) do |f| %>
+  <br />
+    <div class="col-12 col-sm-6">
+      <%= f.file_field :picture %>
+      <%= f.submit "upload" %>
+    </div>
+  <% end %>
+</div>
 
 <br />
 

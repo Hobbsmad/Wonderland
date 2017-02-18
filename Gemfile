@@ -38,6 +38,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'geocoder'
 gem 'figaro'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

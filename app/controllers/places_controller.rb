@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
  def show
    @place = Place.find(params[:id])
    @comment = Comment.new
+   @photo = Photo.new
  end
 
  def edit
@@ -54,6 +55,14 @@ class PlacesController < ApplicationController
    redirect_to root_path
 end
 
+def upload
+  @place = Place.find(params[:id])
+  if @place.user != current_user
+   return render text: 'Not Allowed', status: :forbidden
+ end
+  @place.upload
+  redirect_to root_path
+end
  private
 
  def place_params
