@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
 
   def create
     @place = Place.find(params[:place_id])
-    @place.comments.create(comment_params.merge(user: current_user))
+    @comment = @place.comments.create(comment_params.merge(user: current_user))
+    NotificationMailer.comment_added(@comment).deliver_later
     redirect_to place_path(@place)
   end
 
