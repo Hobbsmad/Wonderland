@@ -51,9 +51,20 @@ class PlacesController < ApplicationController
    if @place.user != current_user
     return render text: 'Not Allowed', status: :forbidden
   end
+  if @place.comments
+    @place.comments.each do |comment|
+      Comment.destroy(comment.id)
+    end
+  end
+  if @place.photos
+    @place.photos.each do |photo|
+      Photo.destroy(photo.id)
+    end
+  end
    @place.destroy
    redirect_to root_path
 end
+
 
 def upload
   @place = Place.find(params[:id])
